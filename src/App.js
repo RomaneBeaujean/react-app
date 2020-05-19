@@ -1,18 +1,11 @@
 import React from 'react';
-import {increment, decrement} from './redux/actions';
-import { useSelector, useDispatch} from 'react-redux';
+import AppWrapper from './components/DisplayMessages';
 
 function App() {
 
-  const counter = useSelector(state => state.counter);
-  const isLogged = useSelector(state => state.isLogged);
-  const dispatch = useDispatch();
-
   return (
     <div className="App">
-      <h1>{counter}</h1>
-      <button onClick={() => store.dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
+        <AppWrapper/>
     </div>
   );
 }
